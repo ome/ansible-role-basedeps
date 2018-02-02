@@ -1,0 +1,19 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: ansible-role-basedeps
+    image: centos
+    image_version: 7
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+#  env:
+#    MOLECULE_DEBUG: "true"
+#  options:
+#    vvv: "true"
+scenario:
+  name: default
