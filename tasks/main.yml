@@ -2,13 +2,13 @@
 # tasks file for roles/basedeps
 
 - name: system packages | install epel repo
-  become: yes
+  become: true
   yum:
     name: epel-release
     state: present
 
 - name: system packages | basic system utils
-  become: yes
+  become: true
   yum:
     name: "{{ item }}"
     state: present
