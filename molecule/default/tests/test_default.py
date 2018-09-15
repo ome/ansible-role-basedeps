@@ -1,5 +1,6 @@
 import os
 
+import pytest
 import testinfra.utils.ansible_runner
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
@@ -12,3 +13,9 @@ def test_hosts_file(host):
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
+
+
+@pytest.mark.parametrize("package", [
+    'patch', 'redhat-lsb-core', 'rsync', 'tar', 'unzip', 'wget', 'zip'])
+def test_packages(host, package):
+    assert host.package(package).is_installed
