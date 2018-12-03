@@ -12,7 +12,7 @@ These dependencies should be suitable for installation on a minimal production s
 Role Variables
 --------------
 
-None
+- `basedeps_install_lsb`: Install Linux Standard Base (LSB) packages, default `true`.
 
 
 Example Playbook
