@@ -7,15 +7,18 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_hosts_file(host):
-    f = host.file('/etc/hosts')
-
-    assert f.exists
-    assert f.user == 'root'
-    assert f.group == 'root'
-
-
 @pytest.mark.parametrize("package", [
-    'patch', 'redhat-lsb-core', 'rsync', 'tar', 'unzip', 'wget', 'zip'])
-def test_packages(host, package):
-    assert host.package(package).is_installed
+    'patch',
+    'rsync',
+    'tar',
+    'unzip',
+    'wget',
+    'zip'
+])
+def test_command(host, package):
+    assert host.exists(package)
+
+
+def test_lsb(host):
+    # Test a command that is automatically installed by LSB
+    assert host.exists('make')
