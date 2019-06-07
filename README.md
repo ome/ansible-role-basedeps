@@ -1,8 +1,8 @@
 Base Dependencies
 =================
 
-[![Build Status](https://travis-ci.org/openmicroscopy/ansible-role-basedeps.svg)](https://travis-ci.org/openmicroscopy/ansible-role-basedeps)
-[![Ansible Role](https://img.shields.io/ansible/role/14288.svg)](https://galaxy.ansible.com/openmicroscopy/basedeps/)
+[![Build Status](https://travis-ci.org/ome/ansible-role-basedeps.svg)](https://travis-ci.org/ome/ansible-role-basedeps)
+[![Ansible Role](https://img.shields.io/ansible/role/41038.svg)](https://galaxy.ansible.com/ome/basedeps/)
 
 Base dependencies for most servers.
 
@@ -20,7 +20,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: openmicroscopy.basedeps }
+         - { role: ome.basedeps }
 
 
 Author Information
