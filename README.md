@@ -2,7 +2,7 @@ Base Dependencies
 =================
 
 [![Build Status](https://travis-ci.org/ome/ansible-role-basedeps.svg)](https://travis-ci.org/ome/ansible-role-basedeps)
-[![Ansible Role](https://img.shields.io/ansible/role/41038.svg)](https://galaxy.ansible.com/ome/basedeps/)
+[![Ansible Role](https://img.shields.io/ansible/role/41039.svg)](https://galaxy.ansible.com/ome/basedeps/)
 
 Base dependencies for most servers.
 
