@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: basedeps
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Base dependencies for most servers.
   company: Open Microscopy Environment
@@ -12,6 +13,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - bionic
-  categories:
+  galaxy_tags:
     - cloud
     - system
