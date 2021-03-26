@@ -6,10 +6,12 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: centos-c7
+  - name: centos-7
     image: centos:7
   - name: ubuntu-1804
     image: ubuntu:18.04
+  - name: ubuntu-2004
+    image: ubuntu:20.04
 provisioner:
   name: ansible
   lint:
