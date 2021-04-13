@@ -1,5 +1,6 @@
 ---
 basedeps_packages:
+  - curl
   - patch
   - rsync
   - tar
