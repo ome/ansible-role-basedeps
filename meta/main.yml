@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: basedeps
+  namespace: ome
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Base dependencies for most servers.
   company: Open Microscopy Environment
