@@ -3,7 +3,7 @@
 
 - name: system packages | install epel repo
   become: true
-  yum:
+  ansible.builtin.yum:
     name: epel-release
     state: present
   when: ansible_os_family == 'RedHat'
@@ -12,21 +12,21 @@
 
 - name: system packages | basic system utils (centos)
   become: true
-  yum:
+  ansible.builtin.yum:
     name: "{{ basedeps_packages }}"
     state: present
   when: ansible_os_family == 'RedHat'
 
 - name: system packages | basic system utils (ubuntu)
   become: true
-  apt:
+  ansible.builtin.apt:
     name: "{{ basedeps_packages }}"
     state: present
   when: ansible_os_family == 'Debian'
 
 - name: system packages | lsb
   become: true
-  package:
+  ansible.builtin.package:
     name: "{{ basedeps_lsb_package[ansible_os_family] }}"
     state: present
   when: basedeps_install_lsb
