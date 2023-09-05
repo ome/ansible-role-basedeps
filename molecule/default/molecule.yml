@@ -8,10 +8,10 @@ lint: |
     ansible-lint
     flake8
 platforms:
-  - name: centos-7
-    image: centos/systemd
-  - name: ubuntu-2004
-    image: ubuntu:20.04
+  - name: rockylinux
+    image: rockylinux:9
+  - name: ubuntu-2204
+    image: ubuntu:22.04
 provisioner:
   name: ansible
   lint:

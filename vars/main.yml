@@ -1,4 +1,6 @@
 ---
+
+
 basedeps_packages:
   - curl
   - patch
@@ -9,5 +11,5 @@ basedeps_packages:
   - zip
 
 basedeps_lsb_package:
-  RedHat: redhat-lsb-core
+  RedHat: redhat-lsb-core.x86_64
   Debian: lsb-core
