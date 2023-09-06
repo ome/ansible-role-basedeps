@@ -11,7 +11,7 @@
 - name: system packages | basic system utils (rockylinux)
   become: true
   ansible.builtin.dnf:
-    name: "{{ basedeps_packages }}"
+    name: "{{ basedeps_packages.redhat }}"
     state: present
     allowerasing: true
   when: ansible_os_family == 'RedHat'
@@ -20,6 +20,6 @@
   become: true
   ansible.builtin.apt:
     update_cache: true
-    name: "{{ basedeps_packages }}"
+    name: "{{ basedeps_packages.debian }}"
     state: present
   when: ansible_os_family == 'Debian'

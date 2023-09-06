@@ -2,10 +2,18 @@
 
 
 basedeps_packages:
-  - curl
-  - patch
-  - rsync
-  - tar
-  - unzip
-  - wget
-  - zip
+  redhat:
+    - patch
+    - rsync
+    - tar
+    - unzip
+    - wget
+    - zip
+  debian:
+    - curl
+    - patch
+    - rsync
+    - tar
+    - unzip
+    - wget
+    - zip
