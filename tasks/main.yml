@@ -22,12 +22,3 @@
     name: "{{ basedeps_packages }}"
     state: present
   when: ansible_os_family == 'Debian'
-
-# lsb_release is only used in ubuntu systems
-# https://github.com/search?q=org%3Aome%20lsb_release&type=code
-- name: system packages | lsb
-  become: true
-  ansible.builtin.package:
-    name: "{{ basedeps_lsb_package[ansible_os_family] }}"
-    state: present
-  when: ansible_os_family == 'Debian'
