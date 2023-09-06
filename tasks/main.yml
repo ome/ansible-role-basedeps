@@ -13,7 +13,6 @@
   ansible.builtin.dnf:
     name: "{{ basedeps_packages.redhat }}"
     state: present
-    allowerasing: true
   when: ansible_os_family == 'RedHat'
 
 - name: system packages | basic system utils (ubuntu)
