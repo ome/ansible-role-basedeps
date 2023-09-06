@@ -19,6 +19,7 @@
 - name: system packages | basic system utils (ubuntu)
   become: true
   ansible.builtin.apt:
+    update_cache: true
     name: "{{ basedeps_packages }}"
     state: present
   when: ansible_os_family == 'Debian'
