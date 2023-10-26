@@ -2,7 +2,7 @@ Base Dependencies
 =================
 
 [![Actions Status](https://github.com/ome/ansible-role-basedeps/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-basedeps/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41039.svg)](https://galaxy.ansible.com/ome/basedeps/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-basedeps-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/basedeps/)
 
 Base dependencies for most servers.
 
