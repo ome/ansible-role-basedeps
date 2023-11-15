@@ -3,7 +3,7 @@
 - name: Import a key for epel
   ansible.builtin.rpm_key:
     state: present
-    key:  https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9
+    key: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9
   when: ansible_os_family == 'RedHat'
 
 - name: epel | setup dnf repository
