@@ -8,13 +8,6 @@ Base dependencies for most servers.
 
 These dependencies should be suitable for installation on a minimal production server.
 
-
-Role Variables
---------------
-
-- `basedeps_install_lsb`: Install Linux Standard Base (LSB) packages, default `true`.
-
-
 Example Playbook
 ----------------
 
