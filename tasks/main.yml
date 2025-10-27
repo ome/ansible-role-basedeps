@@ -9,7 +9,6 @@
 - name: epel | setup dnf repository
   become: true
   ansible.builtin.dnf:
-    update_cache: true
     name:
       https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
     state: present
@@ -27,6 +26,7 @@
   become: true
   ansible.builtin.apt:
     update_cache: true
+    cache_valid_time: 86400
     name: "{{ basedeps_packages.debian }}"
     state: present
   when: ansible_os_family == 'Debian'
